@@ -7,8 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="button" Content="Begin &#xD;&#xA;" HorizontalAlignment="Center" Margin="335,355,399,0" VerticalAlignment="Top" RenderTransformOrigin="-3.258,0.758" Height="75" Width="290" Click="button_Click"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Main.jpg" Stretch="None" />
+        </Grid.Background>
+        <Button x:Name="button" HorizontalAlignment="Center" Margin="305,295,384,0" VerticalAlignment="Top" RenderTransformOrigin="-3.258,0.758" Height="95" Width="335" Click="button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/assets/create.png"></ImageBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>
