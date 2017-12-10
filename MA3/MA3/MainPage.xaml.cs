@@ -25,6 +25,12 @@ namespace MA3
         public MainPage()
         {
             this.InitializeComponent();
+            this.NavigationCacheMode = NavigationCacheMode.Required;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CreatieProfile));
         }
     }
 }
