@@ -11,7 +11,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/Main.jpg" Stretch="None" />
         </Grid.Background>
-        <Button x:Name="button" HorizontalAlignment="Center" Margin="305,295,384,0" VerticalAlignment="Top" RenderTransformOrigin="-3.258,0.758" Height="95" Width="335" Click="button_Click">
+        <Button x:Name="button" HorizontalAlignment="Center" Margin="355,270,334,0" VerticalAlignment="Top" RenderTransformOrigin="-3.258,0.758" Height="95" Width="335" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/assets/create.png"></ImageBrush>
             </Button.Background>
