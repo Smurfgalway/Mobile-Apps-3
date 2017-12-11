@@ -14,5 +14,24 @@
         <Grid.Background>
             <ImageBrush ImageSource="/assets/Main.jpg"/>
         </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" Height="495" VerticalAlignment="Center" Width="535" Margin="245,140,244,5">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/assets/stack.png"/>
+            </StackPanel.Background>
+            <TextBlock x:Name="Name" TextWrapping="Wrap" Text="Full Name:" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-1.8,0"/>
+            <TextBox PlaceholderText="Please enter Full Name" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200"/>
+            
+            <TextBlock x:Name="UserName" TextWrapping="Wrap" Text="Username" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
+            <TextBox PlaceholderText="Please enter a User Name" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200"/>
+
+            <TextBlock x:Name="Password" TextWrapping="Wrap" Text="Password" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
+            <TextBox PlaceholderText="Please enter a Password" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200"/>
+
+            <TextBlock x:Name="DOB" TextWrapping="Wrap" Text="Date Of Birth" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
+            <DatePicker />
+
+            <TextBlock x:Name="Weight" TextWrapping="Wrap" Text="Weight" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
+            <Slider />
+        </StackPanel>
     </Grid>
 </Page>
