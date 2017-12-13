@@ -20,7 +20,7 @@
             </StackPanel.Background>
             <TextBlock x:Name="TName" TextWrapping="Wrap" Text="Full Name:" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-1.8,0"/>
             <TextBox x:Name="Name" PlaceholderText="Please enter Full Name" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200"/>
-            
+
             <TextBlock x:Name="TUserName" TextWrapping="Wrap" Text="Username" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
             <TextBox x:Name="UserName" PlaceholderText="Please enter a User Name" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200" />
 
@@ -32,7 +32,11 @@
 
             <TextBlock x:Name="TWeight" TextWrapping="Wrap" Text="Weight" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
             <Slider />
-            <Button Content="TCreate" Background="White" Click="Button_Click"/>
+            <Button Click="Button_Click" HorizontalAlignment="Center" Width="200" Height="50">
+                <Button.Background>
+                    <ImageBrush ImageSource="/assets/create.png"/>
+                </Button.Background>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>
