@@ -6,6 +6,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,14 +34,26 @@ namespace MA3
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            TodoItem item = new TodoItem
+            Windows.Storage.StorageFolder storageFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            Windows.Storage.StorageFile File = await storageFolder.CreateFileAsync("Profile.txt", Windows.Storage.CreationCollisionOption.ReplaceExisting);
+            Windows.Storage.StorageFile savedFile = await storageFolder.GetFileAsync("Profile.txt");
+
+
+            using (Windows.Storage.Streams.IRandomAccessStream iRandomAccessStream = await savedFile.OpenAsync(FileAccessMode.ReadWrite))
             {
-                Name = Name.Text,
-                UserName = UserName.Text,
-                Password = Password.Text,
-                //DOB = DOB.Date,
-            };
-            await table.InsertAsync(item);
+                using (DataWriter writer = new DataWriter(iRandomAccessStream))
+                {
+                    writer.WriteString(Name.Text);
+                    await writer.StoreAsync();
+                    writer.WriteDateTime(DOB.Date);
+                    await writer.StoreAsync();
+                    writer.WriteString(UserName.Text);
+                    await writer.StoreAsync();
+                    writer.WriteString(Password.Text);
+                    await writer.StoreAsync();
+                }
+            }
+            Frame.Navigate(typeof(BlankPage1));
         }
         public static MobileServiceCollection<TodoItem, TodoItem> getContent()
         {
