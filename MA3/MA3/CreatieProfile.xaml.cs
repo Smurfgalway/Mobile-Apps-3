@@ -44,14 +44,11 @@ namespace MA3
                 using (DataWriter writer = new DataWriter(iRandomAccessStream))
                 {
                     writer.WriteString(Name.Text);
-                    await writer.StoreAsync();
-                    writer.WriteDateTime(DOB.Date);
-                    await writer.StoreAsync();
+                    // writer.WriteDateTime(DOB.Date);
+                    // await writer.StoreAsync();
                     writer.WriteString(Aims.Text);
-                    await writer.StoreAsync();
                     writer.WriteString(Weight.Text);
-                    await writer.StoreAsync();
-                    writer.WriteString(TarWeight.Text);
+                    writer.WriteString(TargetWeight.Text);
                     await writer.StoreAsync();
                 }
             }

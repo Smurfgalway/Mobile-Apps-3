@@ -37,7 +37,7 @@ namespace MA3
                          (StreamReader reader = new StreamReader(stream.AsStream()))
             {
                 textBlock.Text = reader.ReadToEnd();
-                textBlock.DataContext = reader.ReadToEnd();
+                //textBlock.DataContext = reader.ReadToEnd();
             }
         }
     }
