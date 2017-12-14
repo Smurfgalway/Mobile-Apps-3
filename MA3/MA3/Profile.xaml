@@ -14,7 +14,7 @@
         <StackPanel Background="White" Width="500" Height="500" >
             <TextBlock x:Name="textBlock" Foreground="red" HorizontalAlignment="Center" Height="310"  Width="188" Margin="156,0"/>
         </StackPanel>
-        <Button Content="Show Profile" Margin="465,502,0,105" Click="Button_Click" />
+        <Button Content="View Diary" Margin="465,502,0,105" Click="Button_Click" />
     </Grid>
 
 </Page>
