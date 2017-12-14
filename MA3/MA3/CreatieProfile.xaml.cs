@@ -47,9 +47,11 @@ namespace MA3
                     await writer.StoreAsync();
                     writer.WriteDateTime(DOB.Date);
                     await writer.StoreAsync();
-                    writer.WriteString(UserName.Text);
+                    writer.WriteString(Aims.Text);
                     await writer.StoreAsync();
-                    writer.WriteString(Password.Text);
+                    writer.WriteString(Weight.Text);
+                    await writer.StoreAsync();
+                    writer.WriteString(TarWeight.Text);
                     await writer.StoreAsync();
                 }
             }
@@ -59,5 +61,7 @@ namespace MA3
         {
             return mytable;
         }
+
+    
     }
 }
