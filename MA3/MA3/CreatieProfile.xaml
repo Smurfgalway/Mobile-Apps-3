@@ -21,22 +21,22 @@
             <TextBlock x:Name="TName" TextWrapping="Wrap" Text="Full Name:" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-1.8,0"/>
             <TextBox x:Name="Name" PlaceholderText="Please enter Full Name" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200"/>
 
-            <TextBlock x:Name="TUserName" TextWrapping="Wrap" Text="Username" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
-            <TextBox x:Name="UserName" PlaceholderText="Please enter a User Name" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200" />
-
-            <TextBlock x:Name="TPassword" TextWrapping="Wrap" Text="Password" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
-            <TextBox x:Name="Password" PlaceholderText="Please enter a Password" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="200"/>
+            <TextBlock x:Name="TAims" TextWrapping="Wrap" Text="Workout Aims" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
+            <TextBox x:Name="Aims" PlaceholderText="Please tell us what you plan to work on" Background="Transparent" FontSize="20" HorizontalAlignment="Left" Width="385" />
 
             <TextBlock x:Name="TDOB" TextWrapping="Wrap" Text="Date Of Birth" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
             <DatePicker x:Name="DOB"/>
 
             <TextBlock x:Name="TWeight" TextWrapping="Wrap" Text="Weight" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
-            <Slider />
-            <Button Click="Button_Click" HorizontalAlignment="Center" Width="200" Height="50">
+            <TextBox x:Name="Weight"  PlaceholderText="enter weight in KG" Margin="0,0,305.2,0"/>
+            <TextBlock x:Name="TarWeight" TextWrapping="Wrap" Text=" Target Weight" Foreground="White" FontWeight="Bold" FontSize="35" FontFamily="Open Sans" Margin="0,0,-0.8,0"/>
+            <TextBox x:Name="TargetWeight"  PlaceholderText="enter weight in KG" Margin="0,0,305.2,0"/>
+            <Button Click="Button_Click" HorizontalAlignment="Center" Width="200" Height="50" Margin="168,0,167.2,0">
                 <Button.Background>
                     <ImageBrush ImageSource="/assets/create.png"/>
                 </Button.Background>
             </Button>
+            
         </StackPanel>
     </Grid>
 </Page>
