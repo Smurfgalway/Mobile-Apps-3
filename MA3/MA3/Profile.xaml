@@ -12,7 +12,7 @@
             <ImageBrush ImageSource="/assets/Main.jpg"></ImageBrush>
         </Grid.Background>
         <StackPanel Background="White" Width="500" Height="500" >
-            <TextBlock x:Name="textBlock" FontSize="30" Foreground="red" HorizontalAlignment="Center" Height="310"  Width="375" Margin="58,0,67,0"/>
+            <TextBlock x:Name="textBlock" FontSize="30" Foreground="red" HorizontalAlignment="Center" Height="310" TextWrapping="WrapWholeWords"  Width="375" Margin="58,0,67,0"/>
         </StackPanel>
         <Button Content="View Diary" Margin="465,502,0,105" Click="Button_Click" />
     </Grid>
